@@ -43,10 +43,10 @@ OpenCore: 0.9.1
 
 
 # Credits
-* Dortania
-* acidanthera
-* CorpNewt
-* Rehabman
-* Olarila
+* [Dortania] (https://dortania.github.io/OpenCore-Install-Guide/) for amazing guides
+* Acidanthera (https://github.com/acidanthera) for kext
+* [CorpNewt] (https://github.com/corpnewt)
+* [RehabMan] (https://github.com/RehabMan)
+* [Olarila] (https://www.olarila.com/) got my first bootable EFI here
 
 and many others that I have forgotten to include, sorry.
