@@ -24,12 +24,13 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 OpenCore: 0.9.1
 
 # What's Working
+* CPU Power Management
 * Display functions (Color, Brightness, etc)
 * Wifi
 * Bluetooth
 * Trackpad (multitouch and gesture support)
 * Keyboard
-* USB
+* USB Ports
 * Webcam
 * Audio
 * Mic
