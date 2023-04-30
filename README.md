@@ -15,7 +15,7 @@ Wifi | Killer AC Wi-Fi
 Bluetooth | Intel
 Audio | Realtek ALC1220
 SSD0 | ADATA XPG 512GB (purchased additionally, macOS installation and bootloader)
-SSD1 | TOSHIBA 512GB (shipped barebone, Windows 11 installation and bootloader)
+SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 
 # macOS information
 ![img](about.png)
@@ -36,9 +36,10 @@ OpenCore: 0.9.1
 * Sleep/Wake
 
 # Notes
-* I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as an referance. 
-* The config.plists in each folder doesn't have any SMBIOS data to avoid any mixups. Please add your own. I used MacBookPro16,4.
+* I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as an reference. 
+* You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,4.
 * If it somehow failes to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. Major patches are Battery and brightness. Take a look at my DSDT to see how I patched them. You can look for tutorials by rehabman in Tonymac.
+
 
 # Credits
 * Dortania
