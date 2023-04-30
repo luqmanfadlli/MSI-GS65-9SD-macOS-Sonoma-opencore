@@ -38,13 +38,14 @@ OpenCore: 0.9.1
 # Notes
 * I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as an reference. 
 * You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,4.
-* If it somehow failes to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. Major patches are Battery and brightness. Take a look at my DSDT to see how I patched them. You can look for tutorials by rehabman in Tonymac.
+* If it somehow failes to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
+* I haven't tried USB Type-C and Thunderbolt port yet. I'll try later when I have them on my hand.
 
 
 # Credits
 * Dortania
 * acidanthera
-* Corpnewt
+* CorpNewt
 * Rehabman
 * Olarila
 
