@@ -18,6 +18,7 @@ SSD0 | ADATA XPG 512GB (purchased additionally, macOS installation and bootloade
 SSD1 | TOSHIBA 512GB (shipped barebone, Windows 11 installation and bootloader)
 
 # macOS information
+![img](about.png)
 macOS 13.3.1 Ventura
 
 # Bootloader information
