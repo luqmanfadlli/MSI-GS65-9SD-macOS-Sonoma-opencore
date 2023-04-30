@@ -19,7 +19,6 @@ SSD1 | TOSHIBA 512GB (shipped barebone, Windows 11 installation and bootloader)
 
 # macOS information
 ![img](about.png)
-macOS 13.3.1 Ventura
 
 # Bootloader information
 OpenCore: 0.9.1
