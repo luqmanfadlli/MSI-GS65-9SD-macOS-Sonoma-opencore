@@ -22,7 +22,7 @@
 	<string>1.1</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>NXHC</key>
+		<key>_SB.PCI0.RP17.PXSX.TBDU.XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.dhinakg.USBToolBox.kext</string>
@@ -30,21 +30,43 @@
 			<string>USBToolBox</string>
 			<key>IOMatchCategory</key>
 			<string>USBToolBox</string>
-			<key>IONameMatch</key>
-			<string>NXHC</string>
+			<key>IOPropertyMatch</key>
+			<dict>
+				<key>pcidebug</key>
+				<string>58:0:0</string>
+			</dict>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>port-count</key>
 				<data>
-				AAAAAA==
+				AwAAAA==
 				</data>
 				<key>ports</key>
-				<dict/>
+				<dict>
+					<key>HS01</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>9</integer>
+						<key>port</key>
+						<data>
+						AQAAAA==
+						</data>
+					</dict>
+					<key>SS01</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>9</integer>
+						<key>port</key>
+						<data>
+						AwAAAA==
+						</data>
+					</dict>
+				</dict>
 			</dict>
 		</dict>
-		<key>XHC</key>
+		<key>_SB.PCI0.XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.dhinakg.USBToolBox.kext</string>
@@ -52,8 +74,11 @@
 			<string>USBToolBox</string>
 			<key>IOMatchCategory</key>
 			<string>USBToolBox</string>
-			<key>IONameMatch</key>
-			<string>XHC</string>
+			<key>IOPropertyMatch</key>
+			<dict>
+				<key>pcidebug</key>
+				<string>0:20:0</string>
+			</dict>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
 			<key>IOProviderMergeProperties</key>

@@ -1,7 +1,7 @@
 # Introduction
 This is my personal documentation after successfully installing macOS Monterey and Ventura on my MSI GS65 Stealth 9SD and use it as daily driver.
 
-# Machine information
+## Machine information
 |Parts|Details
 |:---:|:---:|
 Model | MSI GS65 Stealth 9SD
@@ -17,30 +17,38 @@ Audio | Realtek ALC1220
 SSD0 | ADATA XPG 512GB (purchased additionally, macOS installation and bootloader)
 SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 
-# macOS information
+## macOS information
 ![img](about.png)
 
-# Bootloader information
-OpenCore: 0.9.1
+## Bootloader information
+OpenCore: 0.9.2
 
 # What's Working
 * CPU Power Management
+* Graphics acceleration
 * Display functions (Color, Brightness, etc)
 * Wifi
-* Bluetooth
+* ~~Bluetooth~~
 * Trackpad (multitouch and gesture support)
 * Keyboard
 * USB Ports
+* USB Type-C (and likely Thunderbolt too)
 * Webcam
 * Audio
 * Mic
 * Sleep/Wake
+* iMessage, FaceTime
+
+# What's Broken
+* Nvidia GPU (Apple removed support for Nvidia GPU)
+* HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working. I'll try to use thunderbolt to HDMI next time.)
+* Bluetooth (Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)
+* AirDrop and Handoff (require bluetooth)
 
 # Notes
 * I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as an reference. 
-* You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,4.
+* You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,1.
 * If it somehow failed to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
-* I haven't tried USB Type-C and Thunderbolt port yet. I'll try later when I have them on my hand.
 
 
 # Credits
@@ -48,6 +56,6 @@ OpenCore: 0.9.1
 - [Acidanthera](https://github.com/acidanthera) for kext
 - [CorpNewt](https://github.com/corpnewt)
 - [RehabMan](https://github.com/RehabMan)
-- [Olarila](https://www.olarila.com/) got my first bootable EFI here
+- [Olarila](https://www.olarila.com/) got my first bootable EFI here (for reference only)
 
 and many others that I have forgotten to include, sorry.
