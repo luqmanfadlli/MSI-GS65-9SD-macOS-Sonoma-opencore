@@ -50,10 +50,11 @@ OpenCore: 0.9.2
 * You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,1.
 * If it somehow failed to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
 
+
 # Sources
-## Opencore
+### Opencore
 [Opencore 0.9.2](https://github.com/acidanthera/OpenCorePkg)
-## Kext
+### Kext
 - [Lilu](https://github.com/acidanthera/Lilu)
 - [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - [Graphics](https://github.com/acidanthera/WhateverGreen)
@@ -68,6 +69,7 @@ OpenCore: 0.9.2
 - [NVMeFix](https://github.com/acidanthera/NVMeFix)
 - [ECEnabler](https://github.com/1Revenger1/ECEnabler)
 - [BrightnessKeys](https://github.com/acidanthera/BrightnessKeys)
+
 
 # Credits
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide) for amazing work in providing comprehensive guides
