@@ -41,7 +41,7 @@ OpenCore: 0.9.2
 
 # What's Broken
 * Nvidia GPU (Apple removed support for Nvidia GPU)
-* HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working. I'll try to use thunderbolt to HDMI next time.)
+* HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working. I've tried patching Intel HDMI but haven't tested.)
 * Bluetooth (Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)
 * AirDrop and Handoff (require bluetooth)
 
@@ -50,12 +50,34 @@ OpenCore: 0.9.2
 * You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,1.
 * If it somehow failed to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
 
+# Sources
+## Opencore
+[Opencore 0.9.2](https://github.com/acidanthera/OpenCorePkg)
+## Kext
+[Lilu](https://github.com/acidanthera/Lilu)
+[VirtualSMC](https://github.com/acidanthera/VirtualSMC)
+[Graphics](https://github.com/acidanthera/WhateverGreen)
+[Audio](https://github.com/acidanthera/AppleALC)
+[Ethernet](https://github.com/Mieze/AtherosE2200Ethernet)
+[USB Mapping Tool](https://github.com/USBToolBox/tool)
+[USB Kext](https://github.com/USBToolBox/kext)
+[WiFi](https://github.com/OpenIntelWireless/itlwm)
+[Bluetooth](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+[Keyboard & Trackpad](https://github.com/acidanthera/VoodooPS2)
+[CpuTscSync](https://github.com/lvs1974/CpuTscSync)
+[NVMeFix](https://github.com/acidanthera/NVMeFix)
+[ECEnabler](https://github.com/1Revenger1/ECEnabler)
+[BrightnessKeys](https://github.com/acidanthera/BrightnessKeys)
 
 # Credits
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide) for amazing work in providing comprehensive guides
 - [Acidanthera](https://github.com/acidanthera) for kext
 - [CorpNewt](https://github.com/corpnewt)
 - [RehabMan](https://github.com/RehabMan)
+- [Mieze](https://github.com/Mieze)
+- [Dhinak G](https://github.com/dhinakg)
+- [Avery Black](https://github.com/1Revenger1)
+- [lvs1974](https://github.com/lvs1974)
 - [Olarila](https://www.olarila.com/) got my first bootable EFI here (for reference only)
 
 and many others that I have forgotten to include, sorry.
