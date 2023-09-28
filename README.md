@@ -53,7 +53,7 @@ OpenCore: 0.9.6
 
 # Sources
 ### Opencore
-[Opencore 0.9.2](https://github.com/acidanthera/OpenCorePkg)
+[Opencore](https://github.com/acidanthera/OpenCorePkg)
 ### Kext
 - [Lilu](https://github.com/acidanthera/Lilu)
 - [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
