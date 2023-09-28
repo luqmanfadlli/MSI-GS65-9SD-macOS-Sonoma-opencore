@@ -21,14 +21,14 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 ![img](about.png)
 
 ## Bootloader information
-OpenCore: 0.9.2
+OpenCore: 0.9.6
 
 # What's Working
 * CPU Power Management
 * Graphics acceleration
 * Display functions (Color, Brightness, etc)
 * Wifi
-* ~~Bluetooth~~
+* Bluetooth
 * Trackpad (multitouch and gesture support)
 * Keyboard
 * USB Ports
@@ -42,7 +42,7 @@ OpenCore: 0.9.2
 # What's Broken
 * Nvidia GPU (Apple removed support for Nvidia GPU)
 * HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working. I've tried patching Intel HDMI but haven't tested.)
-* Bluetooth (Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)
+* Bluetooth ~~(Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)~~ is working now
 * AirDrop and Handoff (require bluetooth)
 
 # Notes

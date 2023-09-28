@@ -1359,7 +1359,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string><Generate Your Own!/string>
+			<string>Generate Your Own!</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
