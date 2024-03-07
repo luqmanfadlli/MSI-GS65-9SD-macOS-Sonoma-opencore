@@ -1,5 +1,5 @@
 # Introduction
-This is my personal documentation after successfully installing macOS Monterey and Ventura on my MSI GS65 Stealth 9SD and use it as daily driver.
+This is my personal documentation after successfully installing macOS Monterey, Ventura, and Sonoma on my MSI GS65 Stealth 9SD and use it as daily driver. This EFI is for the latest Sonoma version.
 
 ## Machine information
 |Parts|Details
@@ -8,7 +8,7 @@ Model | MSI GS65 Stealth 9SD
 CPU | Intel® Core™ i7-9750H Processor (2.60 GHz. up to 4.50 GHz. 12M Cache)
 Intel Generation | Coffee Lake
 RAM | 6GB (2x 8GB) DDR4
-iGPU | Intel CoffeeLake-S GT2 [UHD Graphics 630]
+iGPU | Intel UHD Graphics 630
 dGPU | NVIDIA GeForce GTX1660Ti 6GB (disabled as not supported by macOS)
 Display | 15.6-inch FHD (1920×1080), 144Hz 100%sRGB
 Wifi | Killer AC Wi-Fi
@@ -17,11 +17,11 @@ Audio | Realtek ALC1220
 SSD0 | ADATA XPG 512GB (purchased additionally, macOS installation and bootloader)
 SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 
-## macOS information
+## macOS Screenshot
 ![img](about.png)
 
 ## Bootloader information
-OpenCore: 0.9.6
+OpenCore: 0.9.9
 
 # What's Working
 * CPU Power Management
@@ -41,12 +41,23 @@ OpenCore: 0.9.6
 
 # What's Broken
 * Nvidia GPU (Apple removed support for Nvidia GPU)
-* HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working. I've tried patching Intel HDMI but haven't tested.)
-* Bluetooth ~~(Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)~~ is working now
-* AirDrop and Handoff (require bluetooth)
+* HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working)
+* Bluetooth ~~(Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)~~ is working now with updated kext
+
+# BIOS Settings
+### Disable
+- Fast Boot (disable - optional)
+- Secure Boot
+- Thunderbolt Boot Support
+- Intel Bios Guard Support 
+### Enable
+- VT-d (can be enabled as I use DisableIoMapper)
+- Hyper-Threading
+- XHCI Hand-off
+- SATA Mode: AHCI
 
 # Notes
-* I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as an reference. 
+* I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as a reference. 
 * You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,1.
 * If it somehow failed to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
 
@@ -80,6 +91,5 @@ OpenCore: 0.9.6
 - [Dhinak G](https://github.com/dhinakg)
 - [Avery Black](https://github.com/1Revenger1)
 - [lvs1974](https://github.com/lvs1974)
-- [Olarila](https://www.olarila.com/) got my first bootable EFI here (for reference only)
 
 and many others that I have forgotten to include, sorry.
