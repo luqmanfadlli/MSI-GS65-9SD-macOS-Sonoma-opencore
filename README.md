@@ -24,7 +24,7 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 OpenCore: 1.0.0
 
 # What's Working
-* CPU Power Management (without Turbo Boost)
+* CPU Power Management
 * Graphics acceleration
 * Display functions (Color, Brightness, etc)
 * Wifi
@@ -42,7 +42,6 @@ OpenCore: 1.0.0
 # What's Broken
 * Nvidia GPU (Apple removed support for Nvidia GPU)
 * HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working)
-* Turbo Boost (It works well in previous macOS, but I'm not sure which version. Someone said Apple removed ACPI_SMC_PlatformPlugin.kext (including AppleIntelCPUPowerManagement kexts) in Ventura. It can be restored with OCLP, but I'm not interested to reinstall my OS.)
 
 # BIOS Settings
 ### Disable
