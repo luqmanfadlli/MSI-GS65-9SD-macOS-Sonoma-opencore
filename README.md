@@ -24,7 +24,7 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 OpenCore: 0.9.9
 
 # What's Working
-* CPU Power Management
+* CPU Power Management (without Turbo Boost)
 * Graphics acceleration
 * Display functions (Color, Brightness, etc)
 * Wifi
@@ -42,22 +42,23 @@ OpenCore: 0.9.9
 # What's Broken
 * Nvidia GPU (Apple removed support for Nvidia GPU)
 * HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working)
-* Bluetooth ~~(Working fine in Monterey, but broken in Ventura 13.4. Hackintool detect as BCM_4350C2 but in fact it's Intel Bluetooth with device ID 0x8087, 0x0aaa)~~ is working now with updated kext
+* Turbo Boost (It works well in previous macOS, but I'm not sure which version. Someone Apple removed ACPI_SMC_PlatformPlugin.kext (including AppleIntelCPUPowerManagement kexts) in Ventura. It can be restored with OCLP, but I'm not interested to reinstall my OS.)
 
 # BIOS Settings
 ### Disable
 - Fast Boot (disable - optional)
 - Secure Boot
 - Thunderbolt Boot Support
-- Intel Bios Guard Support 
+- Intel Bios Guard Support
+- VT-d (can be enabled with quirk DisableIoMapper)
+- CFG-Lock (Hidden Settings, press R-CTRL R-Shift L-ALT F2, if you can't disable CFG-Lock enable AppleXcpmCfgLock quirk)
 ### Enable
-- VT-d (can be enabled as I use DisableIoMapper)
 - Hyper-Threading
 - XHCI Hand-off
 - SATA Mode: AHCI
 
 # Notes
-* I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as a reference. 
+* I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as a reference.
 * You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,1.
 * If it somehow failed to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
 
@@ -76,7 +77,6 @@ OpenCore: 0.9.9
 - [WiFi](https://github.com/OpenIntelWireless/itlwm)
 - [Bluetooth](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
 - [Keyboard & Trackpad](https://github.com/acidanthera/VoodooPS2)
-- [CpuTscSync](https://github.com/lvs1974/CpuTscSync)
 - [NVMeFix](https://github.com/acidanthera/NVMeFix)
 - [ECEnabler](https://github.com/1Revenger1/ECEnabler)
 - [BrightnessKeys](https://github.com/acidanthera/BrightnessKeys)
