@@ -21,7 +21,7 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 ![img](about.png)
 
 ## Bootloader information
-OpenCore: 0.9.9
+OpenCore: 1.0.0
 
 # What's Working
 * CPU Power Management (without Turbo Boost)
