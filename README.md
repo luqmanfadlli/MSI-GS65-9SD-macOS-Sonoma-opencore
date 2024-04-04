@@ -42,7 +42,7 @@ OpenCore: 0.9.9
 # What's Broken
 * Nvidia GPU (Apple removed support for Nvidia GPU)
 * HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working)
-* Turbo Boost (It works well in previous macOS, but I'm not sure which version. Someone Apple removed ACPI_SMC_PlatformPlugin.kext (including AppleIntelCPUPowerManagement kexts) in Ventura. It can be restored with OCLP, but I'm not interested to reinstall my OS.)
+* Turbo Boost (It works well in previous macOS, but I'm not sure which version. Someone said Apple removed ACPI_SMC_PlatformPlugin.kext (including AppleIntelCPUPowerManagement kexts) in Ventura. It can be restored with OCLP, but I'm not interested to reinstall my OS.)
 
 # BIOS Settings
 ### Disable
