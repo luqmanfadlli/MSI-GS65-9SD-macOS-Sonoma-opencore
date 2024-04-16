@@ -7,7 +7,7 @@ This is my personal documentation after successfully installing macOS Monterey, 
 Model | MSI GS65 Stealth 9SD
 CPU | Intel® Core™ i7-9750H Processor (2.60 GHz. up to 4.50 GHz. 12M Cache)
 Intel Generation | Coffee Lake
-RAM | 6GB (2x 8GB) DDR4
+RAM | 16GB (2x 8GB) DDR4
 iGPU | Intel UHD Graphics 630
 dGPU | NVIDIA GeForce GTX1660Ti 6GB (disabled as not supported by macOS)
 Display | 15.6-inch FHD (1920×1080), 144Hz 100%sRGB
