@@ -21,7 +21,7 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 ![img](about.png)
 
 ## Bootloader information
-OpenCore: 1.0.0
+OpenCore: 1.0.1
 
 # What's Working
 * CPU Power Management
@@ -37,9 +37,9 @@ OpenCore: 1.0.0
 * Audio
 * Mic
 * Sleep/Wake
-* iMessage, FaceTime
 
 # What's Broken
+* iService (iMessage, FaceTime). The problem is unsupported AirportItlwm.kext. It worked well in Monterey with itlwm.kext. Someone says you can use itlwm.kext with HeliPort in Sonoma, but I've tried and it's still not working.
 * Nvidia GPU (Apple removed support for Nvidia GPU)
 * HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working)
 
@@ -49,7 +49,7 @@ OpenCore: 1.0.0
 - Secure Boot
 - Thunderbolt Boot Support
 - Intel Bios Guard Support
-- VT-d (can be enabled with quirk DisableIoMapper)
+- VT-d (If you need VT-d to be enabled, enable DisableIoMapper quirk in config.plist)
 - CFG-Lock (Hidden Settings, press R-CTRL R-Shift L-ALT F2, if you can't disable CFG-Lock enable AppleXcpmCfgLock quirk)
 ### Enable
 - Hyper-Threading
