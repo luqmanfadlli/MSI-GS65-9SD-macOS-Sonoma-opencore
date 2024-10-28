@@ -1,5 +1,5 @@
 # Introduction
-This is my personal documentation after successfully installing macOS Monterey, Ventura, and Sonoma on my MSI GS65 Stealth 9SD and use it as daily driver. This EFI is for the latest Sonoma version.
+This is my personal documentation after successfully installing macOS Monterey, Ventura, and Sonoma on my MSI GS65 Stealth 9SD and use it as daily driver. This EFI is for the latest Sequoia version.
 
 ## Machine information
 |Parts|Details
@@ -21,7 +21,7 @@ SSD1 | TOSHIBA 512GB (default from MSI, Windows 11 installation and bootloader)
 ![img](about.png)
 
 ## Bootloader information
-OpenCore: 1.0.1
+OpenCore: 1.0.3
 
 # What's Working
 * CPU Power Management
@@ -37,9 +37,11 @@ OpenCore: 1.0.1
 * Audio
 * Mic
 * Sleep/Wake
+* iService (iMessage, FaceTime)
+* Fixed battery drain
 
 # What's Broken
-* iService (iMessage, FaceTime). The problem is unsupported AirportItlwm.kext. It worked well in Monterey with itlwm.kext. Someone says you can use itlwm.kext with HeliPort in Sonoma, but I've tried and it's still not working.
+* ~iService (iMessage, FaceTime). The problem is unsupported AirportItlwm.kext. It worked well in Monterey with itlwm.kext. It's now working with itlwm.kext and HeliPort.~
 * Nvidia GPU (Apple removed support for Nvidia GPU)
 * HDMI (HDMI is connected to Nvidia GPU, since it's disabled then HDMI is not working)
 
@@ -58,8 +60,8 @@ OpenCore: 1.0.1
 
 # Notes
 * I highly recommend building your own files by following Dortania's excellent guide. it will help you understand the big picture and how to use my files correctly. After you went through all the guide, you can use my files as a reference.
+* You can try [OpCore Simplify] by @lzhoang2801 from this link. It solved most of my problems, even some that I didn't even realize. But you need to recheck the final output and make appropiriate adjustment. Even without this minor adjustment, in my experience the EFI is working out of the box.
 * You need to generate your own SMBIOS, see Dortania's Guide. I spoof my device as MacBookPro16,1.
-* If it somehow failed to boot with all my files, the problem is likely to be the DSDT.aml. DSDT is known to be unique to each devices. You will have to make your own DSDT and fix it with patches. I use SSDTTine by CorpNewt to create SSDT on Windows.
 
 
 # Sources
@@ -79,6 +81,7 @@ OpenCore: 1.0.1
 - [NVMeFix](https://github.com/acidanthera/NVMeFix)
 - [ECEnabler](https://github.com/1Revenger1/ECEnabler)
 - [BrightnessKeys](https://github.com/acidanthera/BrightnessKeys)
+- [RestrictEvents](https://github.com/acidanthera/RestrictEvents)
 
 
 # Credits
@@ -90,5 +93,6 @@ OpenCore: 1.0.1
 - [Dhinak G](https://github.com/dhinakg)
 - [Avery Black](https://github.com/1Revenger1)
 - [lvs1974](https://github.com/lvs1974)
+- [lzhoang2801](https://github.com/lzhoang2801)
 
 and many others that I have forgotten to include, sorry.
